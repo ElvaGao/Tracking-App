@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="css/mui.min.css">
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/mui.picker.css" />
+		<link rel="stylesheet" href="css/mui.poppicker.css" />
+		<script src="js/mui.js"></script>
+		<script src="js/common.js"></script>
+		<script src="js/mui.picker.js"></script>
+		<script src="js/mui.poppicker.js"></script>
+	</head>
+
+	<body>
+		<!--页面开始-->
+		<div id="offCanvasWrapper" class="mui-off-canvas-wrap mui-draggable">
+			<!--侧滑菜单部分开始-->
+			<aside id="offCanvasSide" class="mui-off-canvas-left">
+				<div id="offCanvasSideScroll" class="mui-scroll-wrapper">
+					<div class="mui-scroll">
+						<div class="title">TrackingGo</div>
+						<ul class="mui-table-view mui-table-view-chevron mui-table-view-inverted mui-table-view menu_list content" id="menu_list">
+							<li class="mui-table-view-cell">
+								<a dataTxt="index.html"><span class="mui-icon iconfont icon-sousuo"></span><span>Track Your Package</span></a>
+							</li>
+							<li class="mui-table-view-cell">
+								<a dataTxt="orders.html"><span class="mui-icon iconfont icon-archive"></span><span>Archived</span></a>
+							</li>
+							<li class="mui-table-view-cell">
+								<a dataTxt="help.html"><span class="mui-icon iconfont icon-help"></span><span>Help</span></a>
+							</li>
+							<li class="mui-table-view-cell">
+								<a dataTxt="about.html"><span class="mui-icon iconfont icon-about"></span><span>About</span></a>
+							</li>
+							<li class="mui-table-view-cell">
+								<a dataTxt="setting.html"><span class="mui-icon iconfont icon-shezhi"></span><span>Settings</span></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</aside>
+			<!--侧滑菜单部分结束-->
+			<!--主界面部分开始-->
+			<div class="mui-inner-wrap">
+				
+				<!--标题栏开始-->
+				<header class="mui-bar mui-bar-nav">
+					<a href="#offCanvasSide" class="mui-icon mui-action-menu mui-icon-bars iconfont icon-caidan mui-pull-left"></a>
+					<h1 class="mui-title">TrackingGo</h1>
+				</header>
+				<!--标题栏结束-->
+				<!--index页面内容开始-->
+				<div id="offCanvasContentScroll" class="mui-content mui-scroll-wrapper">
+					<div class="mui-scroll">
+						<!--搜索框开始-->
+						<div class="mui-content mui-content-padded index_search">
+							<form action="javascript:;" method="post">
+								<div class="index_search_l">
+									<span class="mui-icon iconfont icon-sousuo is_l_tl"></span>
+									<span class="mui-icon iconfont icon-saoma is_l_tr" id="barcode"></span>
+									<input type="search" id="order_number" class="is_l_t" placeholder="Enter your tracking number">
+									<input type="hidden" id="TrackingId" value="0">
+									<button id='showUserPicker' class="mui-btn mui-btn-block" type='button'>
+										<span class="mui-icon iconfont icon-kuaidi index_search_icon is_l_bl"></span>
+										<span class="mui-icon iconfont icon-jiahao  index_search_icon is_l_br"></span><span id="txt">Choose a courier ...</span>
+									</button>
+									<div id="DivVerify">
+									</div>
+									<div id='userResult' class="ui-alert"></div>
+								</div>
+								<input class="mui-btn mui-pull-right btn_yellow index_search_sub" type="submit" value="Track!" id="start_track"/>
+							</form>
+						</div>
+						<!--搜索框结束-->
+						<!--订单列表开始-->
+						<div class="index_order">
+							<div style="padding: 10px 10px;">
+								<div id="segmentedControl" class="mui-segmented-control io_title">
+									<a class="mui-control-item mui-active" href="#item1">History</a>
+									<a class="mui-control-item" href="#item2">Archived</a>
+								</div>
+							</div>
+							<div class="mui-content-padded ir_list mui-active" id="order_list">
+								<div id="item1" class="mui-control-content mui-active">
+									<ul class="mui-table-view ir_list_ul">
+										<li class="mui-table-view-cell">
+											<div class="mui-slider-right mui-disabled">
+												<a class="mui-btn mui-btn-archive mui-icon iconfont icon-archive"></a>
+												<a class="mui-btn mui-btn-top mui-icon iconfont icon-zhiding"></a>
+												<a class="mui-btn mui-btn-delete mui-icon iconfont icon-shanchu"></a>
+											</div>
+											<div class="mui-slider-handle">
+												<a href="#">
+													<h2 class="ir_list_t">
+														<span class="mui-icon iconfont  icon-chenggong ir_list_tl"></span><span class="irl_t_number">192837465938275</span><span class="irl_t_add">Canada Post</span><span class="mui-icon mui-icon-arrowright ir_list_tr"></span>
+													
+													</h2>
+													<p>JOPLIN.MO.DELIVERED.Package delivered by U.S. Postal Service to address</p>
+												</a>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<div id="item2" class="mui-control-content">
+									<ul class="mui-table-view ir_list_ul">
+										<li class="mui-table-view-cell">
+											<div class="mui-slider-right mui-disabled">
+												<a class="mui-btn mui-icon iconfont icon-history mui-btn-archive"></a>
+												<a class="mui-btn mui-btn-top mui-icon  iconfont icon-zhiding"></a>
+												<a class="mui-btn mui-btn-delete mui-icon iconfont icon-shanchu"></a>
+											</div>
+											<div class="mui-slider-handle">
+												<a href="#">
+													<h2 class="ir_list_t">
+														<span class="mui-icon iconfont icon-chenggong ir_list_tl"></span><span class="irl_t_number">192837465938275</span><span class="irl_t_add">Canada Post</span><span class="mui-icon mui-icon-arrowright ir_list_tr"></span>
+													
+													</h2>
+													<p>JOPLIN.MO.DELIVERED.Package delivered by U.S. Postal Service to address</p>
+												</a>
+											</div>
+										</li>
+										<li class="mui-table-view-cell">
+											<div class="mui-slider-right mui-disabled">
+												<a class="mui-btn mui-icon iconfont icon-history mui-btn-archive"></a>
+												<a class="mui-btn mui-btn-top mui-icon  iconfont icon-zhiding"></a>
+												<a class="mui-btn mui-btn-delete mui-icon iconfont icon-shanchu"></a>
+											</div>
+											<div class="mui-slider-handle">
+												<a href="#">
+													<h2 class="ir_list_t">
+														<span class="mui-icon iconfont icon-shibai  ir_list_tl"></span><span class="irl_t_number">192837465938275</span><span class="irl_t_add">Canada Post</span><span class="mui-icon mui-icon-arrowright ir_list_tr"></span>
+													
+													</h2>
+													<p>NO information available yet.</p>
+												</a>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!--订单列表结束-->
+					</div>
+				</div>
+				<!--index页面内容结束-->
+				
+				<!-- off-canvas backdrop -->
+				<div class="mui-off-canvas-backdrop" id="mui_off_canvas_backdrop"></div>
+				
+			</div>
+			<!--主界面部分结束-->
+			
+		</div>
+		<!--页面结束-->
+	</body>
+</html>
+<script src="js/tracking.js" ></script>
+<script src="js/menu.js" ></script>
+<script src="js/orders.js" ></script>
+<script src="js/index.js" ></script>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	    <meta name="screen-orientation"content="portrait">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	    <title></title>
+		<link rel="stylesheet" href="css/mui.min.css">
+		<link rel="stylesheet" href="css/style.css" />
+		<script src="js/mui.js"></script>
+	</head>
+	<body>
+		<!--标题栏开始-->
+		<header class="mui-bar mui-bar-nav" id="header">
+			<a class="mui-icon mui-action-back mui-icon-back mui-pull-left"></a>
+			<!--搜索框开始-->
+			<div class="mui-title couriers_search">
+				<input type="search" class="cs_search" placeholder="Search for express courier name">
+				<span class="mui-icon iconfont icon-sousuo cs_icon"></span>
+			</div>
+			<!--搜索框结束-->
+		</header>
+		<!--标题栏结束-->
+	
+		<!--couriers页面内容开始-->
+		<div class="mui-content">
+			
+			<!--速运商列表开始-->
+			<div class="mui-content couriers_list">
+				<h3>North America</h3>
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell mui-media">
+						<a href="#">
+							<img class="mui-media-object mui-pull-left" src='images/logo.png' alt="#">
+							<div class="mui-media-body">
+								FedEx
+								<p class='mui-ellipsis'>United States</p>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="#">
+							<img class="mui-media-object mui-pull-left" src="images/logo.png" alt="#">
+							<div class="mui-media-body">
+								FedEx
+								<p class='mui-ellipsis'>United States</p>
+							</div>
+						</a>
+					</li>
+	
+				</ul>
+			</div>
+			<div class="mui-content couriers_list">
+				<h3>North America</h3>
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell mui-media">
+						<a href="#">
+							<img class="mui-media-object mui-pull-left" src="images/logo.png" alt="#">
+							<div class="mui-media-body">
+								FedEx
+								<p class='mui-ellipsis'>United States</p>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="#">
+							<img class="mui-media-object mui-pull-left" src="images/logo.png" alt="#">
+							<div class="mui-media-body">
+								FedEx
+								<p class='mui-ellipsis'>United States</p>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="#">
+							<img class="mui-media-object mui-pull-left" src="images/logo.png" alt="#">
+							<div class="mui-media-body">
+								FedEx
+								<p class='mui-ellipsis'>United States</p>
+							</div>
+						</a>
+					</li>
+	
+				</ul>
+			</div>
+			<!--速运商列表结束-->
+			
+				
+				
+		</div>
+		<!--couriers页面内容结束-->
+	
+		<!-- off-canvas backdrop -->
+		<div class="mui-off-canvas-backdrop" id="mui_off_canvas_backdrop"></div>
+	
+	</body>
+</html>
+<script src="js/tracking.js" ></script>
+<script>
+mui('.couriers_list').on('tap','li',function(){
+	mui.openWindow({
+		url: 'result.html',
+		id: 'result.html'
+	})
+})
+</script>

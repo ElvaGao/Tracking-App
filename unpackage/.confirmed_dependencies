@@ -1,0 +1,125 @@
+{
+  "result.html": {
+    "resources": [
+      "js/common.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "css/style.css",
+      "js/mui.js",
+      "js/immersed.js",
+      "fonts/iconfont.ttf",
+      "fonts/iconfont.woff"
+    ],
+    "refer": [
+      "index.html",
+      "barcode.html",
+      "couriers.html",
+      "orders.html"
+    ]
+  },
+  "index.html": {
+    "resources": [
+      "js/mui.picker.js",
+      "js/common.js",
+      "js/mui.poppicker.js",
+      "fonts/mui.ttf",
+      "css/iconfont.css",
+      "css/mui.min.css",
+      "css/style.css",
+      "js/mui.js",
+      "css/mui.poppicker.css",
+      "css/mui.picker.css",
+      "fonts/iconfont.ttf",
+      "orders.html",
+      "js/track.js",
+      "js/mui.min.js",
+      "js/dongyi.js",
+      "fonts/iconfont.woff",
+      "js/menu.js",
+      "js/index.js",
+      "js/tracking.js",
+      "js/orders.js"
+    ],
+    "refer": [
+      "barcode.html",
+      "result.html",
+      "orders.html",
+      "menu.html",
+      "couriers.html",
+      "setting.html"
+    ]
+  },
+  "orders.html": {
+    "resources": [
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "css/style.css",
+      "fonts/iconfont.ttf",
+      "js/mui.js",
+      "couriers.html",
+      "js/common.js",
+      "fonts/iconfont.woff",
+      "js/menu.js",
+      "js/orders.js",
+      "js/tracking.js"
+    ],
+    "refer": [
+      "couriers.html",
+      "barcode.html",
+      "result.html",
+      "index.html"
+    ]
+  },
+  "couriers.html": {
+    "refer": [
+      "barcode.html",
+      "orders.html",
+      "index.html",
+      "result.html"
+    ],
+    "resources": [
+      "js/common.js",
+      "css/mui.min.css",
+      "css/style.css",
+      "js/mui.js",
+      "fonts/mui.ttf",
+      "fonts/iconfont.ttf",
+      "fonts/iconfont.woff",
+      "images/logo.png",
+      "js/tracking.js"
+    ]
+  },
+  "menu.html": {
+    "resources": [
+      "js/mui.min.js"
+    ],
+    "refer": [
+      "index.html"
+    ]
+  },
+  "barcode.html": {
+    "resources": [
+      "js/common.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "css/style.css",
+      "js/mui.js",
+      "js/barcode.js"
+    ],
+    "refer": [
+      "index.html"
+    ]
+  },
+  "setting.html": {
+    "resources": [
+      "js/setting.js",
+      "js/tracking.js",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "css/style.css",
+      "fonts/iconfont.ttf",
+      "js/menu.js"
+    ]
+  }
+}

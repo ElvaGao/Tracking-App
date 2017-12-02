@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	    <meta name="screen-orientation"content="portrait">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	    <title></title>
+		<link rel="stylesheet" href="css/mui.min.css">
+		<link rel="stylesheet" href="css/style.css" />
+		<script src="js/mui.min.js"></script>
+	</head>
+	<body>
+		<!--页面开始-->
+		<div id="offCanvasWrapper" class="mui-off-canvas-wrap mui-draggable">
+			<!--侧滑菜单部分开始-->
+			<aside id="offCanvasSide" class="mui-off-canvas-left">
+				<div id="offCanvasSideScroll" class="mui-scroll-wrapper">
+					<div class="mui-scroll">
+						<div class="title">TrackingGo</div>
+						<ul class="mui-table-view mui-table-view-chevron mui-table-view-inverted mui-table-view menu_list content" id="menu_list">
+							<li class="mui-table-view-cell">
+								<a dataTxt="index.html"><span class="mui-icon iconfont icon-sousuo"></span><span>Track Your Package</span></a>
+							</li>
+							<li class="mui-table-view-cell">
+								<a dataTxt="orders.html"><span class="mui-icon iconfont icon-archive"></span><span>Archived</span></a>
+							</li>
+							<li class="mui-table-view-cell">
+								<a dataTxt="help.html"><span class="mui-icon iconfont icon-help"></span><span>Help</span></a>
+							</li>
+							<li class="mui-table-view-cell">
+								<a dataTxt="about.html"><span class="mui-icon iconfont icon-about"></span><span>About</span></a>
+							</li>
+							<li class="mui-table-view-cell">
+								<a dataTxt="setting.html"><span class="mui-icon iconfont icon-shezhi"></span><span>Settings</span></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</aside>
+			<!--侧滑菜单部分结束-->
+			<!--主界面部分开始-->
+			<div class="mui-inner-wrap">
+				<!--标题栏开始-->
+				<header class="mui-bar mui-bar-nav">
+				    <a href="#offCanvasSide" class="mui-icon mui-action-menu mui-icon-bars iconfont icon-caidan mui-pull-left"></a>
+				    <h1 class="mui-title">Help</h1>
+				</header>
+				<!--标题栏结束-->
+				
+				<!--about页面内容开始-->
+				<div id="offCanvasContentScroll" class="mui-content mui-scroll-wrapper">
+					<div class="mui-scroll">
+						<div class="mui-content-padded help">
+							<h3>How to use TrackingGo?</h3>
+							<h4>1. Type your tracking number</h4>
+							<p>Choose the courier you use and enter your tracking number to track your package.</p>
+							<h4>2. Click the button "Track"</h4>
+							<p>Click the button "Track" on the right side to track your package.</p>
+							<h4>3. View your package info</h4>
+							<p>Move to the tracking results page to view your package's info, including package delivery records and location on the map.
+	To make TrackingGo the best, we need to hear from you! If you have any comments, suggestions, please do not hesitate to contact us.</p>
+							<h3>What is the reason for no tracking records?</h3>
+							<p>The most common cause of no tracking records is incorrectly typed tracking number. It is advised to check with the sender if you are not sure what the number is. Besides, it takes up to 24 hours for a new package to show up in the system.</p>
+							<h3>What are the hours of delivery?</h3>
+							<p>It is advised to check with local office for accurate results, because the hours of delivery vary by product and location.</p>
+						</div>
+					</div>
+				</div>
+				<!--orders页面内容结束-->
+		
+				<!-- off-canvas backdrop -->
+				<div class="mui-off-canvas-backdrop" id="mui_off_canvas_backdrop"></div>
+			</div>
+			<!--主界面部分结束-->
+		</div>
+		<!--页面结束-->
+	</body>
+</html>
+<script src="js/tracking.js"></script>
+<script src="js/menu.js"></script>

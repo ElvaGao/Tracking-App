@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	    <meta name="screen-orientation"content="portrait">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	    <title></title>
+		<link rel="stylesheet" href="css/mui.min.css">
+		<link rel="stylesheet" href="css/style.css" />
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript" src="js/menu.js" ></script>
+	</head>
+	<body>
+		<!--页面开始-->
+		<div id="offCanvasWrapper" class="mui-off-canvas-wrap mui-draggable">
+			<!--侧滑菜单部分开始-->
+			<aside id="offCanvasSide" class="mui-off-canvas-left">
+				<div id="offCanvasSideScroll" class="mui-scroll-wrapper">
+					<div class="mui-scroll">
+						<div class="title">TrackingGo</div>
+						<ul class="mui-table-view mui-table-view-chevron mui-table-view-inverted mui-table-view menu_list content" id="menu_list">
+							<li class="mui-table-view-cell">
+								<a dataTxt="index.html"><span class="mui-icon iconfont icon-sousuo"></span><span>Track Your Package</span></a>
+							</li>
+							<li class="mui-table-view-cell">
+								<a dataTxt="orders.html"><span class="mui-icon iconfont icon-archive"></span><span>Archived</span></a>
+							</li>
+							<li class="mui-table-view-cell">
+								<a dataTxt="help.html"><span class="mui-icon iconfont icon-help"></span><span>Help</span></a>
+							</li>
+							<li class="mui-table-view-cell">
+								<a dataTxt="about.html"><span class="mui-icon iconfont icon-about"></span><span>About</span></a>
+							</li>
+							<li class="mui-table-view-cell">
+								<a dataTxt="setting.html"><span class="mui-icon iconfont icon-shezhi"></span><span>Settings</span></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</aside>
+			<!--侧滑菜单部分结束-->
+			<!--主界面部分开始-->
+			<div class="mui-inner-wrap">
+			
+				<!--标题栏开始-->
+				<header class="mui-bar mui-bar-nav" id="header">
+				    <a href="#offCanvasSide" class="mui-icon mui-action-menu mui-icon-bars iconfont icon-caidan mui-pull-left"></a>
+				    <h1 class="mui-title">Setting</h1>
+				</header>
+				<!--标题栏结束-->
+				
+				<!--setting页面内容开始-->
+				<div id="offCanvasContentScroll" class="mui-content mui-scroll-wrapper">
+					<div class="mui-scroll">
+				
+						<div class="mui-content set_divs">
+							<h4>Features</h4>
+						    <ul class="mui-table-view">
+						    		<li class="mui-table-view-cell" id="rate">
+						            <a class="mui-navigate-right"><span class="mui-icon iconfont icon-pingjia1"></span><span>Rate Us</span></a>
+						        </li>
+						        
+						    </ul>
+						</div>
+						<div class="mui-content set_divs">
+							<h4>Support</h4>
+						    <ul class="mui-table-view">
+						    		<!--<li  class="mui-table-view-cell" id="clear_cache">
+						    			<a class="mui-navigate-right"><span class="mui-icon iconfont icon-pingjia1"></span><span>Clear Cache</span></a>
+						    		</li>-->
+						        <li class="mui-table-view-cell" id="notice">
+						            <a class="mui-navigate-right"><span class="mui-icon iconfont icon-xiaoxi"></span><span>Receive notification</span></a>
+						        </li>
+						        <!--<li class="mui-table-view-cell" id="share">
+						            <a class="mui-navigate-right"><span class="mui-icon iconfont icon-fenxiang"></span><span>Share</span></a>
+						        </li>-->
+						        <li class="mui-table-view-cell" id="email">
+						            <a class="mui-navigate-right"><span class="mui-icon iconfont icon-about"></span><span>Feedback</span></a>
+						        </li>
+						    </ul>
+					   </div>
+					</div>
+				</div>
+				<!--setting页面内容结束-->
+	
+				<!-- off-canvas backdrop -->
+				<div class="mui-off-canvas-backdrop" id="mui_off_canvas_backdrop"></div>
+			</div>
+			<!--主界面部分结束-->
+		</div>
+	</body>
+</html>
+<script src="js/tracking.js"></script>
+<script src="js/setting.js"></script>
+<script>
+mui.plusReady(function(){
+	//推送
+	mui('#notice')[0].addEventListener('tap',function(){
+	    setPush();
+	});
+	//评价应用
+	mui('#rate')[0].addEventListener('tap', function() {
+		setRate();
+	});
+	//发送邮件联系我们
+	mui('#email')[0].addEventListener('tap',function(){
+		sendEmail();
+	})
+});
+</script>

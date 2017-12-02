@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	    <meta name="screen-orientation"content="portrait">
+	    <meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	    <title></title>
+	    <link rel="stylesheet" href="css/mui.min.css">
+		<link rel="stylesheet" href="css/style.css" />
+		<script src="js/mui.js"></script>
+		<script type="text/javascript" src="js/common.js" ></script> 
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav" id="header">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">Scan</h1>
+		    <button type="button" class="mui-pull-right scan_photo" onclick="scanPicture();">Photo</button>
+		</header>
+		<div class="mui-content mui-content-padded barcode_scan">
+			
+			<div id="scan">
+				<p class="tip">loading...</p>
+			</div>
+			
+			<div class="scan_btn">
+				<button class="mui-btn mui-btn-primary" id="scan_start">开始扫描</button>
+				<button class="mui-btn mui-btn-primary" id="scan_cancel">取消扫描</button>
+				<button class="mui-btn mui-btn-primary" id="scan_flash">开启闪光灯</button>
+			</div>
+			
+		</div>
+	</body>
+</html>
+<script src="js/tracking.js" ></script>
+<script src="js/barcode.js" ></script>
